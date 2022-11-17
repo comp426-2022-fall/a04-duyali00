@@ -15,7 +15,7 @@ app.get('/app/roll/', (req, res) => {               // 4. Endpoint '/app/roll/' 
 	res.send(roll(6,2,1))                           
 });
 
-app.get('/app/roll', (req, res) => {                // 5. Endpoint '/app/roll/' should ALSO accept either JSON or URLEncoded data body for sides, dice, and rolls.
+app.post('/app/roll', (req, res) => {                // 5. Endpoint '/app/roll/' should ALSO accept either JSON or URLEncoded data body for sides, dice, and rolls.
     const sides = parseInt(req.body.sides)          // urlencoded
     const dice = parseInt(req.body.dice)
     const rolls = parseInt(req.body.rolls)
